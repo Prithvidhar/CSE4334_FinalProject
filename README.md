@@ -9,6 +9,10 @@ import torch.nn.functional as F
 import torchvision
 from torchvision.transforms import ToTensor
 import torch
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from PIL import Image 
+import PIL 
 
 trans = torchvision.transforms.Compose([
     torchvision.transforms.RandAugment(),
@@ -88,10 +92,7 @@ parallel_model = torch.nn.DataParallel(model)
 parallel_model.load_state_dict(torch.load(PATH,map_location=torch.device('cpu')))
 parallel_model.eval()
 
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-from PIL import Image 
-import PIL 
+
 imagep = mpimg.imread('path to your image')
 image = Image.open(r"path to your image") 
 imageplot = plt.imshow(imagep)
