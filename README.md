@@ -1,5 +1,5 @@
 # CSE4334_FinalProject
-This a experiment to see which algorithm is the best for image classification. It turned out to be CNN.
+This is an experiment to see which algorithm is the best for image classification. It turned out to be CNN.
 ## Deployment instructions
 To deploy my model copy and paste the following code into a notebook. You should first run the main notebook to receive a .pt file that contains the weight and biases
 of my model
