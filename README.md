@@ -84,17 +84,18 @@ class Model(nn.Module):
         return x
 
 
-
-PATH = 'path of state_dict.pt received from main notebook'
+#https://pytorch.org/tutorials/recipes/recipes/save_load_across_devices.html#save-on-gpu-load-on-cpu
+PATH = '{path to state_dict.pt}'
 # device = torch.device('cpu')
 model = Model()
 parallel_model = torch.nn.DataParallel(model)
 parallel_model.load_state_dict(torch.load(PATH,map_location=torch.device('cpu')))
 parallel_model.eval()
 
-
-imagep = mpimg.imread('path to your image')
-image = Image.open(r"path to your image") 
+#https://matplotlib.org/stable/tutorials/introductory/images.html (Plotting image using matplot lib)
+#https://www.geeksforgeeks.org/python-pil-image-save-method/ (saving image using PIL)
+imagep = mpimg.imread('{path to your image}')
+image = Image.open(r"{path to your image}") 
 imageplot = plt.imshow(imagep)
 plt.show()
 
