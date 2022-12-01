@@ -1,7 +1,7 @@
 # CSE4334_FinalProject
 This is an experiment to see which algorithm is the best for image classification. It turned out to be CNN.
 ## Deployment instructions
-1. Run the **cse4334-mainproject.ipynb** notebook. It will a little over 5 hours to train. An .pt binary file should be generated as output
+1. Run the **cse4334-mainproject.ipynb** notebook. It will a little over 5 hours to train. An .pt binary file should be generated as output (this step should be done if you do not have the .pt file)
 2. To deploy my model copy and paste the following code into a notebook. Save the path to your image and the .pt file
 ```python
 import torch.nn as nn
