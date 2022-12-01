@@ -1,8 +1,8 @@
 # CSE4334_FinalProject
 This is an experiment to see which algorithm is the best for image classification. It turned out to be CNN.
 ## Deployment instructions
-To deploy my model copy and paste the following code into a notebook. You should first run the main notebook to receive a .pt file that contains the weights and biases
-of my model
+1. Run the **cse4334-mainproject.ipynb** notebook. It will a little over 5 hours to train. An .pt binary file should be generated as output
+2. To deploy my model copy and paste the following code into a notebook. Save the path to your image and the .pt file
 ```python
 import torch.nn as nn
 import torch.nn.functional as F
@@ -108,3 +108,4 @@ maxele,maxindx = torch.max(output,1)
 
 print(Labels[maxindx.item()])
 ```
+That should be it! Have fun classifying animals
